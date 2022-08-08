@@ -39,7 +39,7 @@ struct CoinManager {
                 
                 if let safeData = data {
                     if let coin = self.parseJson(coinData: safeData) {
-                        let coinPrice = String(format: "%2.f", coin)
+                        let coinPrice = String(format: "%.2f", coin)
                         self.delegate?.didUpdateCoin(price: coinPrice, currency: currency)
                     }
                 }
